@@ -64,4 +64,4 @@ server.use('/',require('./js/yueqiqd.js')());
 server.use('/olimage', express.static('olimage'));
 
 server.use(express.static('qhview/view'));
-server.listen(80,'www.yueqi1803h5.com');
+server.listen(80,'www.yueqi.com');
