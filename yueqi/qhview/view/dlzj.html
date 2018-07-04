@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="./img/100.png" rel="shortcut icon" type="image/x-icon" />
+  <title>山野楽器：楽器オンライン通販サイトYAMANO MUSIC Online</title>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+  <script src="https://cdn.bootcss.com/axios/0.16.0/axios.min.js"></script>
+  <link rel="stylesheet" href="./css/dlzj.css">
+</head>
+
+<body>
+  <div id="body1235">
+    <div class="top"></div>
+    <div class="bigkuang">
+      <!-- 顶部导航开始 -->
+
+      <header class="logo">
+        <a href="./YAMANOMUSICOnline">
+          <img src="./img/logo.gif" alt="">
+        </a>
+        <ul class="logo1">
+          <li>
+            <a href="">
+              <img src="./img/002.gif" alt="">
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <img src="./img/001.gif" alt="">
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <img src="./img/003.gif" alt="">
+            </a>
+          </li>
+        </ul>
+
+        <span>いらっしゃいませ ゲスト さま</span>
+
+        <div class="abc">
+          <input type="text" placeholder="楽器を探す">
+          <a href="">
+            <img src="./img/004.gif" alt="">
+          </a>
+
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="http://www.yueqi1803h5.com/hard/docs/hard/help.jsp">ご利用・ご注文方法</a>
+            </li>
+            <li>
+              <a href="http://www.yueqi1803h5.com/docs/sitemap/index.html">サイトマップ</a>
+            </li>
+            <li>
+              <a href="http://www.yueqi1803h5.com/info/">お問い合わせ</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="emm">
+          <ul>
+            <li>
+              <img src="./img/07.png" alt="">
+            </li>
+            <li>
+              <a href="./dl">ログアウト</a>
+            </li>
+            <li>
+              <img src="./img/08.png" alt="">
+            </li>
+            <li>
+              <a href="./zc" target="_blank">マイページ</a>
+            </li>
+            <li>
+              <img src="./img/3.gif" alt="">
+            </li>
+            <li>
+              <a href="./gwc">ショッピングカート</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <!-- 顶部导航结束 -->
+
+      <!-- 主页面开始 -->
+      <div class="divbox">
+        <div class="wzt">
+          <a href="./grzlxg">
+            <div>お客さま情報変更</div>
+          </a>
+          <div class="bbq11">お届け先リスト追加</div>
+          <p>いらっしゃいませ
+            <%=nameyh%>さま</p>
+        </div>
+        <h1>お届け先リスト追加</h1>
+      </div>
+
+      <div class="divboxx">
+        <form action="">
+          <a href="./tjsh?FuncTion=Add">
+            <p class="p1-1">
+              <img class="wzt1" src="./img/01.gif" alt="">新しいお届け先をリストに追加する</p>
+          </a>
+
+          <table class="ta1">
+            <tbody>
+              <tr>
+                <th>
+                  <p>お届け先登録名</p>
+                </th>
+                <th>
+                  <p>お名前</p>
+                </th>
+                <th>
+                  <p>ご住所</p>
+                </th>
+                <th>
+                  <p>お電話番号</p>
+                </th>
+                <th>
+                  <p>修改地址</p>
+                </th>
+              </tr>
+              <%for(var obj of shdz){%>
+                <tr>
+                  <td>
+                    <p>
+                      <%=obj.usernames%>
+                    </p>
+                  </td>
+                  <td>
+                    <p>
+                      <%=obj.username%>
+                    </p>
+                  </td>
+                  <td>
+                    <p>
+                      <%=obj.dz%>
+                    </p>
+                  </td>
+                  <td>
+                    <p>
+                      <%=obj.tel%>
+                    </p>
+                  </td>
+                  <td class="xiugaidz">
+                    <el-button type="button" @click="biangeng($event,<%=obj.p1id%>)">变更</el-button>
+                    <el-button type="button" @click="open2($event,<%=obj.p1id%>)">删除</el-button>
+                    <!-- <input type="button" data-p1id="<%=obj.p1id%>"  v-on:click="delete1"> -->
+                  </td>
+                </tr>
+                <%}%>
+            </tbody>
+          </table>
+        </form>
+        <div class="f90">
+
+          <ul>
+            <li>
+              <div>
+                <p class="w11">
+                  <a href="./YAMANOMUSICOnline">
+                    <input type="button" src="" value="楽器オンラインショップへ戻る" />
+                  </a>
+                </p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <p class="w12">
+                  <a href="./YAMANOMUSICOnline">
+                    <input type="button" src="" value="お買い物を続ける" />
+                  </a>
+                </p>
+              </div>
+        </div>
+        </li>
+        </ul>
+
+      </div>
+      <!-- 主页面结束 -->
+    </div>
+
+    <!-- 底部导航开始 -->
+    <div class="bottom">
+      <!--  <div class="bottom1">
+              <ul>
+                <li> -->
+      <a href="http://www.yueqi1803h5.com/company/law/">特定商取引法に基づく表記(楽器)</a>
+      <!-- </li>
+                <li> -->&nbsp;&nbsp;｜&nbsp;&nbsp;
+      <!-- </li>
+                <li> -->
+      <a href="http://www.yueqi1803h5.com/company/law/#anc_02">古物営業法に基づく表記</a>
+      <!-- </li>
+                <li> -->&nbsp;&nbsp;｜&nbsp;&nbsp;
+      <!-- </li> -->
+      <!-- <li class="li1"> -->
+      <a href="http://www.yueqi1803h5.com/company/privacy_policy/">個人情報について</a>
+      <!-- </li>
+              </ul> -->
+      <!--  </div> -->
+      <!--  <div class="bottom2"> -->
+      <!-- <p> -->
+      <br> 山野楽器オンラインショップに掲載されているすべてのコンテンツ（記事、画像データなど）は、（株）山野楽器の承諾なく無断で掲載および転載できません。
+      <!-- </p> -->
+      <!-- </div>
+            <div class="bottom3">
+              <p> -->
+      <br> copyright Yamano Music co. All rights reserved.
+      <!-- </p>
+            </div> -->
+      <!-- 底部导航结束 -->
+    </div>
+  </div>
+</body>
+
+</html>
+<script src="./js/dlzj.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>

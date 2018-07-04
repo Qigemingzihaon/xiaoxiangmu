@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="./img/100.png" rel="shortcut icon" type="image/x-icon" />
+  <title>山野楽器：楽器オンライン通販サイトYAMANO MUSIC Online</title>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+  <script src="https://cdn.bootcss.com/axios/0.16.0/axios.min.js"></script>
+  <link rel="stylesheet" href="./css/gw.css">
+</head>
+
+<body>
+  <div id="body1235">
+    <div class="top"></div>
+    <div class="bigkuang">
+      <!-- 顶部导航开始 -->
+
+      <header class="logo">
+        <a href="./YAMANOMUSICOnline">
+          <img src="./img/logo.gif" alt="">
+        </a>
+        <ul class="logo1">
+          <li>
+            <a href="">
+              <img src="./img/002.gif" alt="">
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <img src="./img/001.gif" alt="">
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <img src="./img/003.gif" alt="">
+            </a>
+          </li>
+        </ul>
+
+        <span>いらっしゃいませ ゲスト さま</span>
+
+        <div class="abc">
+          <input type="text" placeholder="楽器を探す">
+          <a href="">
+            <img src="./img/004.gif" alt="">
+          </a>
+
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="http://www.yueqi1803h5.com/hard/docs/hard/help.jsp">ご利用・ご注文方法</a>
+            </li>
+            <li>
+              <a href="http://www.yueqi1803h5.com/docs/sitemap/index.html">サイトマップ</a>
+            </li>
+            <li>
+              <a href="http://www.yueqi1803h5.com/info/">お問い合わせ</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="emm">
+          <ul>
+            <li>
+              <img src="./img/07.png" alt="">
+            </li>
+            <li>
+              <a href="./tc">ログイン</a>
+            </li>
+            <li>
+              <img src="./img/08.png" alt="">
+            </li>
+            <li>
+              <a href="./dlwl" target="_blank">マイページ</a>
+            </li>
+            <li>
+              <img src="./img/3.gif" alt="">
+            </li>
+            <li>
+              <a href="./gwc">ショッピングカート</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <!-- 顶部导航结束 -->
+
+      <!-- 主页面开始 -->
+      <div class="divbox">
+        <h1>カート</h1>
+      </div>
+
+      <div class="divboxx">
+        <div class="divbox1">
+          <p>
+            <a href="./YAMANOMUSICOnline">楽器オンラインショップ </a>> カート</p>
+        </div>
+
+        <div class="divbox2">
+          <img src="./img/0001.png" alt="">
+        </div>
+        <form action="">
+
+          <table class="ta1">
+            <tbody>
+              <tr>
+                <th colspan=6>
+                  <p>商品は選択されていません</p>
+                </th>
+              </tr>
+              <tr>
+
+                <th>
+                  <p>商品</p>
+                </th>
+                <th>
+                  <p>单价</p>
+                </th>
+                <th>
+                  <p>数量</p>
+                </th>
+                <th>
+                  <p>收货地址</p>
+                </th>
+                <th>
+                  <p>删除</p>
+                </th>
+                <th>
+                  <p>选择</p>
+                </th>
+              </tr>
+              <tr v-for='site in datatj'>
+                <td>
+                  <p>{{site.product_pname}}</p>
+                </td>
+                <td>
+                  <p>{{site.money}}</p>
+                </td>
+                <td>
+                  <template>
+                    <el-input-number v-model="site.gwfs" @change="handleChange" :min="0" :max="10" label="描述文字"></el-input-number>
+                  </template>
+                  <!-- <p>{{site.gwfs}}</p> -->
+                </td>
+                <td>
+                  <template>
+                    <el-select v-model="site.p1id">
+                      <el-option value="" label="请选择"></el-option>
+                      <el-option v-for="item in site.shdz" :key="item.p1id" :label="item.xianshidz" :value="item.p1id">
+                      </el-option>
+                    </el-select>
+                  </template>
+                  <!-- <p>{{site.shdz}}</p> -->
+                </td>
+                <td class="xiugaidz">
+                  <el-button type="button" style='border:0px' @click="open2($event,site.gwc)">删除</el-button>
+                </td>
+                <td>
+                  <template>
+                    <!-- `checked` 为 true 或 false -->
+                    <el-checkbox v-model="site.checked" style="margin-left:20px"></el-checkbox>
+                  </template>
+                </td>
+              </tr>
+            </tbody>
+
+          </table>
+        </form>
+
+        <p class="w11">
+          <a href="#">
+            <input type="button" src="" value="お買い物を続ける" @click="tijiaodj($event)" />
+          </a>
+        </p>
+      </div>
+      <!-- 主页面结束 -->
+    </div>
+
+    <!-- 底部导航开始 -->
+    <div class="bottom">
+      <!--  <div class="bottom1">
+              <ul>
+                <li> -->
+      <a href="http://www.yueqi1803h5.com/company/law/">特定商取引法に基づく表記(楽器)</a>
+      <!-- </li>
+                <li> -->&nbsp;&nbsp;｜&nbsp;&nbsp;
+      <!-- </li>
+                <li> -->
+      <a href="http://www.yueqi1803h5.com/company/law/#anc_02">古物営業法に基づく表記</a>
+      <!-- </li>
+                <li> -->&nbsp;&nbsp;｜&nbsp;&nbsp;
+      <!-- </li> -->
+      <!-- <li class="li1"> -->
+      <a href="http://www.yueqi1803h5.com/company/privacy_policy/">個人情報について</a>
+      <!-- </li>
+              </ul> -->
+      <!--  </div> -->
+      <!--  <div class="bottom2"> -->
+      <!-- <p> -->
+      <br> 山野楽器オンラインショップに掲載されているすべてのコンテンツ（記事、画像データなど）は、（株）山野楽器の承諾なく無断で掲載および転載できません。
+      <!-- </p> -->
+      <!-- </div>
+            <div class="bottom3">
+              <p> -->
+      <br> copyright Yamano Music co. All rights reserved.
+      <!-- </p>
+            </div> -->
+      <!-- 底部导航结束 -->
+    </div>
+  </div>
+
+</body>
+
+</html>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="./js/gwc.js"></script>
