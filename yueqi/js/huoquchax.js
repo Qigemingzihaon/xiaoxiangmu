@@ -2,8 +2,6 @@ const express = require('express');
 const path = require('path');
 const async = require('async');
 const waterfall = require('async/waterfall');
-
-
 const mysql = require(path.dirname(__dirname) + "/lib/mysql.js")('yueqi');
 module.exports = function (db, shousuoci, fengye, res) {
   var shoutui;
