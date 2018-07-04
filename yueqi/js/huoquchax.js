@@ -66,6 +66,7 @@ module.exports = function (db, shousuoci, fengye, res) {
               callback1();
             }
           });
+          
         },
         function (err) {
           shoutui = result;
