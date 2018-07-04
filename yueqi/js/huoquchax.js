@@ -20,7 +20,7 @@ module.exports = function (db, shousuoci, fengye, res) {
       },
       function (arg1, callback) {
         //定义每页显示多少条数据
-        var pagenum = 10;
+        var pagenum = 16;
         //当前的页数
         var page = fengye;
         if (page < 1) page = 1;
@@ -93,7 +93,7 @@ module.exports = function (db, shousuoci, fengye, res) {
         },
         function (arg1, callback) {
           //定义每页显示多少条数据
-          var pagenum = 10;
+          var pagenum = 16;
           //当前的页数
           var page = fengye;
           if (page < 1) page = 1;
