@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <link href="./img/100.png" rel="shortcut icon" type="image/x-icon" />
+  <title>山野楽器：楽器オンライン通販サイトYAMANO MUSIC Online</title>
+  <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+  <script src="https://cdn.bootcss.com/axios/0.16.0/axios.min.js"></script>
+  <script src="./js/jquery-1.8.3.min.js"></script>
+
+  <link rel="stylesheet" href="./css/tjsh.css">
+</head>
+
+<body>
+  <div id="body1235" >
+
+    <div class="top"></div>
+    <div class="bigkuang">
+      <!-- 顶部导航开始 -->
+
+      <header class="logo">
+        <a href="./YAMANOMUSICOnline">
+          <img src="./img/logo.gif" alt="">
+        </a>
+        <ul class="logo1">
+          <li>
+            <a href="">
+              <img src="./img/002.gif" alt="">
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <img src="./img/001.gif" alt="">
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <img src="./img/003.gif" alt="">
+            </a>
+          </li>
+        </ul>
+
+        <span>いらっしゃいませ ゲスト さま</span>
+
+        <div class="abc">
+          <input type="text" placeholder="楽器を探す">
+          <a href="">
+            <img src="./img/004.gif" alt="">
+          </a>
+
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="http://www.yueqi1803h5.com/hard/docs/hard/help.jsp">ご利用・ご注文方法</a>
+            </li>
+            <li>
+              <a href="http://www.yueqi1803h5.com/docs/sitemap/index.html">サイトマップ</a>
+            </li>
+            <li>
+              <a href="http://www.yueqi1803h5.com/info/">お問い合わせ</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="emm">
+          <ul>
+            <li>
+              <img src="./img/07.png" alt="">
+            </li>
+            <li>
+              <a href="./tc">ログイン</a>
+            </li>
+            <li>&nbsp;&nbsp;&nbsp;
+              <img src="./img/08.png" alt="">
+            </li>
+            <li>
+              <a href="./admindlwl" target="_blank">マイページ</a>
+            </li>
+            <li>&nbsp;&nbsp;
+              <img src="./img/3.gif" alt="">
+            </li>
+            <li>
+              <a href="./tc">ショッピングカート</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <!-- 顶部导航结束 -->
+
+      <!-- 主页面开始 -->
+      <div class="divbox">
+        <div class="wzt">
+          <!-- <a href="./grzlxg"><div>お客さま情報変更</div></a> -->
+          <a href="./adminshangp">
+            <div>お届け先リスト追加</div>
+          </a>
+          <p>いらっしゃいませ {{suijidlid}}さま</p>
+        </div>
+        <h1>お届け先リスト追加</h1>
+      </div>
+
+      <div class="divboxx">
+        <form action="">
+          <h2>お届け先リストの新規登録</h2>
+          <p class="p1-1">※は必須項目となります。</p>
+
+          <table class="ta1">
+            <tbody>
+
+
+              <tr>
+                <th>
+                  <ul>
+                    <li>
+                      <p>产品名称</p>
+                    </li>
+                  </ul>
+                </th>
+                <td>
+                  <p>
+                    <div class="np1">
+                      <input class="pu1" type="text" name="" v-model="datatj[0].product_pname">
+                    </div>
+                  </p>
+                  <p class="cap">（全角）</p>
+                  <p class="cap1">例）実家など</p>
+                </td>
+              </tr>
+
+              <tr>
+                <th>
+                  <ul>
+                    <li>
+                      <p>建议售价</p>
+                    </li>
+                    <li>
+                      <span>※</span>
+                    </li>
+                  </ul>
+                </th>
+                <td>
+                  <p>
+                    <div class="np1">
+                      <input class="pu1" type="text" name="" v-model="datatj[1].suggestmoney">
+                    </div>
+                  </p>
+                  <p class="cap">（全角）</p>
+                  <p class="cap1">例）山田　太郎</p>
+                </td>
+              </tr>
+
+              <tr>
+                <th>
+                  <ul>
+                    <li>
+                      <p>店铺售价</p>
+                    </li>
+                    <li>
+                      <span>※</span>
+                    </li>
+                  </ul>
+                </th>
+                <td>
+                  <p>
+                    <div class="np2">
+                      <input class="pu2" type="text" name="" v-model="datatj[2].money">
+                    </div>
+                  </p>
+                  <p class="cap2">（半角英数）</p>
+                </td>
+              </tr>
+
+              <tr>
+                <th>
+                  <ul>
+                    <li>
+                      <p>产品分类</p>
+                    </li>
+                    <li>
+                      <span>※</span>
+                    </li>
+                  </ul>
+                </th>
+                <td>
+                  <select v-model="datatj[3].pdtid" id="shi">
+                    <option value="">選択して下さい</option>
+                    <option value="1">吉他/贝斯/鼓</option>
+                    <option value="2">デジタル</option>
+                    <option value="3">管乐器</option>
+                    <option value="4">弦乐器</option>
+                    <option value="5">其他</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <ul>
+                    <li>
+                      <p>详细介绍</p>
+                    </li>
+                    <li>
+                      <span>※</span>
+                    </li>
+                  </ul>
+                </th>
+                <td>
+                  <p>
+                    <div class="np11">
+                      <input class="pu11" type="text" name="" v-model="datatj[4].particular">
+                    </div>
+                  </p>
+                  <p class="cap4">（全角）</p>
+                </td>
+              </tr>
+
+              <tr>
+                <th>
+                  <ul>
+                    <li>
+                      <p>商铺地址</p>
+                    </li>
+                    <li>
+                      <span>※</span>
+                    </li>
+                  </ul>
+                </th>
+                <td>
+                  <p>
+                    <div class="np11">
+                      <input class="pu11" type="text" name="" v-model="datatj[5].shopid">
+                    </div>
+                  </p>
+                  <p class="cap5">（全角）</p>
+                </td>
+              </tr>
+
+              <tr>
+                <th>
+                  <ul>
+                    <li>
+                      <p>联系お電話番号</p>
+                    </li>
+                    <li>
+                      <span>※</span>
+                    </li>
+                  </ul>
+                </th>
+                <td>
+                  <p>
+                    <div class="np6">
+                      <input class="pu117" type="text" name="" v-model="datatj[6].shotel">
+                    </div>
+                  </p>
+                  <p class="cap16">（半角英数）</p>
+                  <p class="cap1">例）03-0000-0000
+                    <span>番号の間に必ず“-”を入力してください</span>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <ul>
+                    <li>
+                      <p>商品图片</p>
+                    </li>
+                    <li>
+                      <span>※</span>
+                    </li>
+                  </ul>
+                </th>
+                <td>
+                  <p>
+                    <div class="np11">
+                      <input id="submit-button" class="pu11" type="file" multiple="multiple">
+                      <!-- <input class="pu11" type="text" name="" v-model="datatj[5].xiangxi"> -->
+                    </div>
+                  </p>
+                  <p class="cap5">
+                    <button  type="button" @click="uploadk">开始上传文件</button>
+                    <!-- <button id="submit-button" type="button" >开始上传文件</button> -->
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <ul>
+                    <li>
+                      <p>商品图片路径</p>
+                    </li>
+                    <li>
+                      <span>※</span>
+                    </li>
+                  </ul>
+                </th>
+                <td @drop='drop($event,"cexiao")' @dragover='allowDrop($event)'>
+                    <div class="np11" style="display: none">
+                      <!-- <input  type="text" name="" v-model="datatj[6].tel"> -->
+                      <input class="pu11" type="text" name="picpath" v-model="datatj[7].imgurl">
+                    </div>
+                    <ul>
+                      <li v-for="(site,index)  in datatj[7].imgurl" >
+                        <img @dragstart='drag($event,index,"del")' draggable='true' v-if='ok' v-bind:src="site.imgurl" alt="" style="max-width: 200px;max-height: 200px;"> 
+                        <img @dragstart='drag($event,index,"del")' draggable='true' v-if='!ok' v-bind:src="'/olimage'+site" alt="" style="max-width: 200px;max-height: 200px;"> 
+                      </li>
+                    </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <ul>
+                    <li>
+                      <p>图片删除<span>※</span>将图片拖至此行(撤销拖回)</p>
+                    </li>
+                    <li>
+                      
+                    </li>
+                  </ul>
+                </th>
+                <td @drop='drop($event,"del")' @dragover='allowDrop($event)'>
+                  <li v-for="(site,index)  in deleteimg" >
+                    <img @dragstart='drag($event,index,"cexiao")' draggable='true' v-if='ok' v-bind:src="site.imgurl" alt="" style="max-width: 200px;max-height: 200px;"> 
+                    <img @dragstart='drag($event,index,"cexiao")' draggable='true' v-if='!ok' v-bind:src="'/olimage'+site" alt="" style="max-width: 200px;max-height: 200px;"> 
+                  </li>
+                </td>
+              </tr>
+
+
+            </tbody>
+
+          </table >
+        </form>
+
+        <div class="f90">
+
+          <ul>
+            <li>
+              <div>
+                <p class="w11">
+                  <a href="./adminshangp">
+                    <input type="button" src="" value="戻 る" />
+                  </a>
+                </p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <p class="w12">
+                  <a href="#">
+                    <!-- <a href="./tjsh1" ></a> -->
+                    <input type="button" class="btn btn-md  " v-on:click="qued" src="" value="確 認" />
+                  </a>
+                </p>
+              </div>
+        </div>
+        </li>
+        </ul>
+
+      </div>
+      <!-- 主页面结束 -->
+    </div>
+
+    <!-- 底部导航开始 -->
+    <div class="bottom">
+      <!--  <div class="bottom1">
+              <ul>
+                <li> -->
+      <a href="http://www.yueqi1803h5.com/company/law/">特定商取引法に基づく表記(楽器)</a>
+      <!-- </li>
+                <li> -->&nbsp;&nbsp;｜&nbsp;&nbsp;
+      <!-- </li>
+                <li> -->
+      <a href="http://www.yueqi1803h5.com/company/law/#anc_02">古物営業法に基づく表記</a>
+      <!-- </li>
+                <li> -->&nbsp;&nbsp;｜&nbsp;&nbsp;
+      <!-- </li> -->
+      <!-- <li class="li1"> -->
+      <a href="http://www.yueqi1803h5.com/company/privacy_policy/">個人情報について</a>
+      <!-- </li>
+              </ul> -->
+      <!--  </div> -->
+      <!--  <div class="bottom2"> -->
+      <!-- <p> -->
+      <br> 山野楽器オンラインショップに掲載されているすべてのコンテンツ（記事、画像データなど）は、（株）山野楽器の承諾なく無断で掲載および転載できません。
+      <!-- </p> -->
+      <!-- </div>
+            <div class="bottom3">
+              <p> -->
+      <br> copyright Yamano Music co. All rights reserved.
+      <!-- </p>
+            </div> -->
+      <!-- 底部导航结束 -->
+    </div>
+  </div>
+</body>
+
+</html>
+<script src="./js/admintjsh.js"></script>
+<script src="./js/uploadk.js"></script>

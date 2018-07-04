@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="./img/100.png" rel="shortcut icon" type="image/x-icon" />
+    <title>山野楽器：楽器オンライン通販サイトYAMANO MUSIC Online</title>
+    <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/axios/0.16.0/axios.min.js"></script>
+    <link rel="stylesheet" href="./css/my.css">
+</head>
+
+<body>
+    <div id="body1235">
+    <!-- 顶部导航开始 -->
+    <div class="top"></div>
+    <header class="logo">
+        <a href="./">
+            <img src="./img/logo.gif" alt="">
+        </a>
+        <ul class="logo1">
+            <li>
+                <a href="">
+                    <img src="./img/002.gif" alt="">
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <img src="./img/001.gif" alt="">
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <img src="./img/003.gif" alt="">
+                </a>
+            </li>
+        </ul>
+
+        <span>いらっしゃいませ ゲスト さま</span>
+
+        <div class="abc">
+            <input type="text" v-model='shousuok' placeholder="楽器を探す">
+            <a :href="lianjie+'?shou='+shousuok+'&page='+yeshu">
+                <img src="./img/004.gif" alt="">
+            </a>
+
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="http://www.yueqi1803h5.com/hard/docs/hard/help.jsp">ご利用・ご注文方法</a>
+                </li>
+                <li>
+                    <a href="http://www.yueqi1803h5.com/docs/sitemap/index.html">サイトマップ</a>
+                </li>
+                <li>
+                    <a href="http://www.yueqi1803h5.com/info/">お問い合わせ</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="emm">
+            <ul>
+                <%if(dengl=="ok" ){%>
+                    <li>
+                        <img src="./img/07.png" alt="">
+                    </li>
+                    <li>
+                        <a href="./tc">ログアウト</a>
+                    </li>
+                    <li>
+                        <img src="./img/08.png" alt="">
+                    </li>
+                    <li>
+                        <a href="./dlwl" target="_blank">マイページ</a>
+                    </li>
+                    <li>
+                        <img src="./img/3.gif" alt="">
+                    </li>
+                    <li>
+                        <a href="./gwc">ショッピングカート</a>
+                    </li>
+                    <%}else{%>
+                        <li>
+                            <img src="./img/1.gif" alt="">
+                        </li>
+                        <li>
+                            <a href="/dl">ログイン</a>
+                        </li>
+                        <li>
+                            <img src="./img/2.gif" alt="">
+                        </li>
+                        <li>
+                            <a href="/zc" target="_blank">新規登録</a>
+                        </li>
+                        <li>
+                            <img src="./img/3.gif" alt="">
+                        </li>
+                        <li>
+                            <a href="/gwc">ショッピングカート</a>
+                        </li>
+                        <%}%>
+            </ul>
+        </div>
+    </header>
+    <!-- 顶部导航结束 -->
+
+    <!-- 主页面开始 -->
+    <div class="big-menu">
+
+        <div class="left1">
+            <a href="http://www.yueqi1803h5.com/shops/ginza/g-piano" target="_blank">
+                <img src="./img/5.jpg" alt="">
+            </a>
+            <div class="tts">
+                <img src="./img/4.png" alt="">
+            </div>
+        </div>
+
+        <div class="right1">
+            <div>
+                <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=4&classCode=39">
+                    <img src="./img/66.jpg" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="left2">
+            <div>
+                <img src="./img/7.jpg" alt="">
+                <div class="left2-1">
+                    <span>ギター・ベース・ドラム</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="left3">
+            <div>
+                <ul>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=1&classCode=01-01">
+                        <li>・エレキギター</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=1&classCode=01-02">
+                        <li>・アコースティックギター</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=1&classCode=01-03">
+                        <li>・クラシックギター</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=1&classCode=02">
+                        <li>・ベース</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=1&classCode=03">
+                        <li>・アンプ</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=1&classCode=04">
+                        <li>・エフェクター</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=1&classCode=05">
+                        <li>・ウクレレ</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=1&classCode=23">
+                        <li>・マンドリン</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=1&classCode=07">
+                        <li>・ドラム</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=1&classCode=08">
+                        <li>・アクセサリー</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right2">
+            <ul>
+                <li class="li1">
+                    <a href="http://www.glguitars.jp/" target="_blank">
+                        <img src="./img/8.jpg" alt="" class="right2-2">
+                    </a>
+                </li>
+                <li class="li1">
+                    <a href="https://www.wisdomguitar.jp/" target="_blank">
+                        <img src="./img/9.jpg" alt="" class="right2-2">
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.yueqi1803h5.com/instrument/flute/pickup/importbrand.html">
+                        <img src="./img/10.png" alt="" class="right2-1">
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.yueqi1803h5.com/hard/docs/hard/epiano/CLP-main.jsp">
+                        <img src="./img/11.jpg" alt="" class="right2-1">
+                    </a>
+                </li>
+                <li class="li2">
+                    <a href="http://www.yueqi1803h5.com/shops/ginza/contents/g-string/violin/italian_violin/index.html">
+                        <img src="./img/12.png" alt="" class="right2-1">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="left4">
+            <img src="./img/13.jpg" alt="">
+            <div class="left4-1">
+                <span>デジタル</span>
+            </div>
+        </div>
+
+        <div class="left5">
+            <div>
+                <ul>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=5&classCode=06">
+                        <li>・すべて</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=5&classCode=06-14">
+                        <li>・電子楽器＆シンセサイザー</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=5&classCode=06-08">
+                        <li>・オーディオインターフェイス /
+                            <br>&nbsp;&nbsp;&nbsp;MIDI関連</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=5&classCode=06-09">
+                        <li>・レコーダー / MTR</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=5&classCode=06-10">
+                        <li>・PA・ミキサー / スピーカー</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=5&classCode=06-11">
+                        <li>・マイク</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=5&classCode=06-12">
+                        <li>・音楽制作ソフト</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=5&classCode=06-13">
+                        <li>・その他</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="left6">
+            <img src="./img/14.jpg" alt="">
+            <div class="left6-1">
+                <span>管楽器</span>
+            </div>
+        </div>
+
+        <div class="left7">
+            <div>
+                <ul>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=2&classCode=09">
+                        <li>・フルート</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=2&classCode=10">
+                        <li>・クラリネット</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=2&classCode=12">
+                        <li>・サックス</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=2&classCode=11">
+                        <li>・オーボエ</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=2&classCode=13">
+                        <li>・トランペット</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=2&classCode=14">
+                        <li>・ホルン</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=2&classCode=15">
+                        <li>・トロンボーン</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=2&classCode=16">
+                        <li>・ユーフォニアム</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=2&classCode=33">
+                        <li>・リコーダー</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=2&classCode=17">
+                        <li>・木管楽器アクセサリー</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=2&classCode=18">
+                        <li>・金管楽器アクセサリー</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="left8">
+            <img src="./img/15.jpg" alt="">
+            <div class="left8-1">
+                <span>弦楽器</span>
+            </div>
+        </div>
+
+        <div class="left9">
+            <div>
+                <ul>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=3&classCode=24">
+                        <li>・ヴァイオリン</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=3&classCode=25">
+                        <li>・分数ヴァイオリン</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=3&classCode=26">
+                        <li>・ヴィオラ</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=3&classCode=27">
+                        <li>・チェロ</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=3&classCode=28">
+                        <li>・弓</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=3&classCode=30">
+                        <li>・サイレントシリーズ</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=3&classCode=29">
+                        <li>・ケース</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=3&classCode=31">
+                        <li>・アクセサリー</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="left10">
+            <img src="./img/16.jpg" alt="">
+            <div class="left10-1">
+                <span>ピアノ・その他</span>
+            </div>
+        </div>
+
+        <div class="left11">
+            <div>
+                <ul>
+                    <a href="http://www.yueqi1803h5.com/shops/ginza/g-piano">
+                        <li>・ピアノ
+                            <br>&nbsp;&nbsp;&nbsp;(銀座本店ピアノフロア)</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=4&classCode=34">
+                        <li>・電子ピアノ</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=4&classCode=36">
+                        <li>・知育・キッズ楽器</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=4&classCode=20-02,20-03,20-06,20-09,20-10">
+                        <li>・その他の楽器</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=4&classCode=20-05">
+                        <li>・譜面台</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=4&classCode=20-01">
+                        <li>・メトロノーム他</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=4&classCode=35">
+                        <li>・音楽小物・アクセサリー</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=4&classCode=37">
+                        <li>・オーディオ</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?classType=4&classCode=39">
+                        <li>・電子楽譜</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right3">
+            <div class="right3-2">
+                <h2>今月のおすすめ商品：エレキギター</h2>
+            </div>
+        </div>
+      <%for(var i=0;i<shouye.length;i++){ var n=4+i;%>
+          
+        <div class="<%='right'+n%>">
+            <a href="<%='./zssp?pdpctid='+shouye[i].pdpctid%>">
+                <div>
+                    <img src="<%=shouye[i].imgurl[0]%>" alt="">
+                    <div class="<%='right'+n+'-1'%>">
+                        <p>新品</p>
+                    </div>
+                    <h6 class="<%='right'+n+'-2'%>"><%=shouye[i].product_pname%></h6>
+                    <p class="<%='right'+n+'-3'%>"><%=shouye[i].shopid%>
+                    </p>
+                    <p class="<%='right'+n+'-4'%>">販売価格 :
+                        <em><%=shouye[i].money%></em>
+                    </p>
+                </div>
+            </a>
+        </div>
+      <%}%>
+
+   
+        <div class="right8">
+            <div class="right8-2">
+                <h2>ピックアップ：管楽器</h2>
+            </div>
+            <div class="right13">
+                <p>※ 表示価格はすべて税込価格です。</p>
+            </div>
+        </div>
+
+        <div class="right9">
+            <a href="http://www.yueqi1803h5.com/hard/userProdDetail.do?goodsCode=G000090102">
+                <div>
+                    <img src="./img/21.jpg" alt="">
+                    <div class="right9-1">
+                        <p>新品</p>
+                    </div>
+                    <h6 class="right9-2">YAMAHA</h6>
+                    <p class="right9-3">ダブルホルン
+                        <br>YHR-869DS (Silver)
+                        <br>[山野楽器特注仕様]
+                        <br>（ウインドクルー）
+                    </p>
+                    <p class="right9-4">販売価格 :
+                        <em>￥790,560</em>
+                    </p>
+                </div>
+            </a>
+        </div>
+
+        <div class="right10">
+            <a href="http://www.yueqi1803h5.com/hard/userProdDetail.do?goodsCode=G000121096">
+                <div>
+                    <img src="./img/22.jpg" alt="">
+                    <div class="right10-1">
+                        <p>新品</p>
+                    </div>
+                    <h6 class="right10-2">YAMAHA</h6>
+                    <p class="right10-3">フルート
+                        <br>YFL-312YT
+                        <br>125周年記念モデル
+                        <br>（本店5Ｆフルートサロン）
+                    </p>
+                    <p class="right10-4">販売価格 :
+                        <em>￥128,520</em>
+                    </p>
+                </div>
+            </a>
+        </div>
+
+        <div class="right11">
+            <a href="http://www.yueqi1803h5.com/hard/userProdDetail.do?goodsCode=G000121098">
+                <div>
+                    <img src="./img/23.jpg" alt="">
+                    <div class="right11-1">
+                        <p>新品</p>
+                    </div>
+                    <h6 class="right11-2">YAMAHA</h6>
+                    <p class="right11-3">フルート
+                        <br>YFL-517YT
+                        <br>125周年記念モデル
+                        <br>（本店5Ｆフルートサロン）
+                    </p>
+                    <p class="right11-4">販売価格 :
+                        <em>￥210,600</em>
+                    </p>
+                </div>
+            </a>
+        </div>
+
+        <div class="right12">
+            <a href="http://www.yueqi1803h5.com/hard/userProdDetail.do?goodsCode=G000126076">
+                <div>
+                    <img src="./img/24.jpg" alt="">
+                    <div class="right12-1">
+                        <p>新品</p>
+                    </div>
+                    <h6 class="right12-2">YAMAHA</h6>
+                    <p class="right12-3">Venova YVS-100
+                        <br>（本店5F管楽器フロア）
+                    </p>
+                    <p class="right12-4">販売価格 :
+                        <em>￥10,800</em>
+                    </p>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="left12">
+            <div class="left12-1">
+                <ul>
+                    <li>
+                        <a href="https://www.wisdomguitar.jp/" target="_blank">
+                            <img src="./img/25.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.taylorguitars.jp/" target="_blank">
+                            <img src="./img/26.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.yueqi1803h5.com/docs/gl/">
+                            <img src="./img/27.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.rickenbacker-jp.com/" target="_blank">
+                            <img src="./img/28.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://hofner.jp/" target="_blank">
+                            <img src="./img/29.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/koalohaukulele.jp/?fref=ts" target="_blank">
+                            <img src="./img/30.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://levys.jp/" target="_blank">
+                            <img src="./img/31.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.yueqi1803h5.com/shakaijin/">
+                            <img src="./img/32.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.yueqi1803h5.com/hard/docs/hard/2015/announce.jsp">
+                            <img src="./img/33.gif" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="left13">
+            <div class="left13-1">
+                <ul>
+                    <li>
+                        <a href="http://www.yueqi1803h5.com/company/yamano/">
+                            <img src="./img/34.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.yueqi1803h5.com/service/after_service/">
+                            <img src="./img/35.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.yueqi1803h5.com/instrument/piano/">
+                            <img src="./img/36.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.yueqi1803h5.com/instrument/score/">
+                            <img src="./img/37.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.yueqi1803h5.com/service/used_purchasing.html">
+                            <img src="./img/38.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.yueqi1803h5.com/en/taxfree.html">
+                            <img src="./img/39.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="left13-2">
+                        <a href="https://trusted-web-seal.cybertrust.ne.jp/seal/validationScreens/Validators4SSL/SSL-ENG-Valid.jsp">
+                            <img src="./img/50.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right14">
+            <div class="right14-1">
+                <h3>最近見た商品</h3>
+            </div>
+        </div>
+
+        <div class="right15">
+            <div class="right15-1">
+                <h3>注目のカテゴリー</h3>
+            </div>
+        </div>
+
+        <div class="right16">
+            <div class="right16-1">
+                <a href="http://www.yueqi1803h5.com/hard/userProdList.do?searchOrg=14&classCode=35">
+                    <img src="./img/40.png" alt="">
+                </a>
+                <a href="http://www.yueqi1803h5.com/hard/docs/hard/2017/bag.jsp">
+                    <img src="./img/41.png" alt="">
+                </a>
+                <a href="http://www.yueqi1803h5.com/docs/soft/recommend/bunne/index.jsp">
+                    <img class="img1" src="./img/42.png" alt="">
+                </a>
+            </div>
+
+            <div class="right16-2">
+                <ul>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?searchOrg=14&classCode=35">
+                        <li>・音楽小物/アクセサリー</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?searchOrg=14&classCode=35-07">
+                        <li>・オルゴール</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?searchOrg=14&classCode=35-01">
+                        <li>・ステーショナリー</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?searchOrg=14&classCode=35-02">
+                        <li>・音楽ファイル</li>
+                    </a>
+                </ul>
+            </div>
+
+            <div class="right16-3">
+                <ul>
+                    <a href="http://www.yueqi1803h5.com/hard/docs/hard/2017/bag.jsp">
+                        <li>・レッスンバッグ</li>
+                    </a>
+                </ul>
+            </div>
+
+            <div class="right16-4">
+                <ul>
+                    <a href="http://www.yueqi1803h5.com/hard/userProdList.do?searchOrg=14&classCode=36">
+                        <li>・知育・キッズ楽器</li>
+                    </a>
+                    <a href="http://www.yueqi1803h5.com/docs/soft/recommend/bunne/index.jsp">
+                        <li>・ブンネメソッド</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right17">
+            <div class="right17-1">
+                <div class="right17-2">
+                    <h3>楽器取り扱い店舗のご案内</h3>
+                </div>
+
+                <div class="right17-3">
+                    <h4>銀座本店</h4>
+                </div>
+                <div class="right17-4">
+                    <ul>
+                        <li>6F：
+                            <a href="http://www.yueqi1803h5.com/shops/ginza/g-piano">ピアノフロア</a>、
+                            <a href="http://www.yueqi1803h5.com/shops/ginza/g-soundproof">防音相談
+                                <br>コーナー</a>
+                        </li>
+                        <li>5F：
+                            <a href="http://www.yueqi1803h5.com/shops/ginza/g-wind">管楽器フロア</a>、
+                            <a href="http://www.yueqi1803h5.com/shops/ginza/g-flute">フルート
+                                <br>サロン</a>
+                        </li>
+                        <li>4F：
+                            <a href="http://www.yueqi1803h5.com/shops/ginza/g-guitar">ギターフロア</a>
+                        </li>
+                        <li>3F：
+                            <a href="http://www.yueqi1803h5.com/shops/ginza/g-string">弦楽器サロン</a>、
+                            <a href="http://www.yueqi1803h5.com/shops/ginza/g-score">楽譜フロ
+                                <br>ア</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="right17-5">
+                    <h4>仙台店</h4>
+                </div>
+                <div class="right17-6">
+                    <ul>
+                        <li>3F：
+                            <a href="http://www.yueqi1803h5.com/shops/sendai/s-piano">ピアノフロア</a>
+                        </li>
+                        <li>2F：
+                            <a href="http://www.yueqi1803h5.com/shops/sendai/s-wind">管楽器フロア</a>、
+                            <a href="http://www.yueqi1803h5.com/shops/sendai/s-string">弦楽器フ
+                                <br>ロア</a>
+                        </li>
+                        <li>B1：
+                            <a href="http://www.yueqi1803h5.com/shops/sendai/s-guitar">ギターフロア ROCK INN</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="right17-7">
+                    <h4>管楽器専門店</h4>
+                </div>
+                <div class="right17-8">
+                    <ul>
+                        <li>
+                            <a href="http://www.yueqi1803h5.com/shops/windcrew/">ウインドクルー</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="right17-9">
+                    <h4>LM楽器専門店</h4>
+                </div>
+                <div class="right17-10">
+                    <ul>
+                        <li>
+                            <a href="http://www.yueqi1803h5.com/shops/rockinn-shinjuku-1/">ロックイン新宿(ギター&ドラ
+                                <br>ム館)</a>
+                        </li>
+                        <li>
+                            <a href="http://www.yueqi1803h5.com/shops/rockinn-shinjuku-2/">ロックイン新宿(デジタル&エ
+                                <br>フェクター館)</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="right17-11">
+                    <h4>ギター専門店</h4>
+                </div>
+                <div class="right17-12">
+                    <ul>
+                        <li>
+                            <a href="http://www.yueqi1803h5.com/shops/guitarspot/">ギタースポット（川崎）</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="r1">
+                    <div class="right17-13">
+                        <h4>楽器専門店</h4>
+                    </div>
+                    <div class="right17-14">
+                        <ul>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/rockinn-kichijoji/">ロックイン吉祥寺</a>
+                            </li>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/soundcrew-kichijoji/">サウンドクルー吉祥寺</a>
+                            </li>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/center-kita/">センター北店</a>
+                            </li>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/soundcrew-ebina/">サウンドクルー海老名</a>
+                            </li>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/soundcrew-kumagaya/">サウンドクルー熊谷</a>
+                            </li>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/soundcrew-kashiwa/">サウンドクルー柏</a>
+                            </li>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/soundcrew-utsunomiya/">サウンドクルー宇都宮</a>
+                            </li>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/rockinn-namba/">ロックイン難波</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="r2">
+                    <div class="right17-15">
+                        <h4>その他の楽器取扱店</h4>
+                    </div>
+                    <div class="right17-16">
+                        <ul>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/nihonbashi/">日本橋三越店</a>
+                            </li>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/seibu-ikebukuro/">西武池袋店</a>
+                            </li>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/odakyu-shinjuku/">小田急新宿店</a>
+                            </li>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/seijo/">成城コルティ店</a>
+                            </li>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/higashikurume/">イオンモール東久留米店</a>
+                            </li>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/chofu/">調布パルコ店</a>
+                            </li>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/fuchu/">府中フォーリス店</a>
+                            </li>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/hachioji/">セレオ八王子店</a>
+                            </li>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/yokohama/">そごう横浜店</a>
+                            </li>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/yokohama/">辻堂店</a>
+                            </li>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/hiratsuka/">ラスカ平塚店ラスカ平塚店</a>
+                            </li>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/musashikosugi/">武蔵小杉店</a>
+                            </li>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/tamaplaza/">たまプラーザ テラス店</a>
+                            </li>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/shinyurigaoka/">新百合ヶ丘エルミロード店</a>
+                            </li>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/sagamiohno/">相模大野ステーションスクエ
+                                    <br>ア店</a>
+                            </li>
+                            <li>
+                                <a href="http://www.yueqi1803h5.com/shops/honatsugi/">本厚木ミロード店</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="last">
+                    <ul>
+                        <li>
+                            <a href="http://www.yueqi1803h5.com/shops/kitatoda/">イオンモール北戸田店　</a>
+                        </li>
+                        <li>
+                            <a href="http://www.yueqi1803h5.com/shops/kawaguchi/">そごう川口店</a>
+                        </li>
+                        <li>
+                            <a href="http://www.yueqi1803h5.com/shops/urawa-misono/">イオンモール浦和美園店</a>
+                        </li>
+                        <li>
+                            <a href="http://www.yueqi1803h5.com/shops/oomiya/">そごう大宮店</a>
+                        </li>
+                        <li>
+                            <a href="http://www.yueqi1803h5.com/shops/tokorozawa/">ワルツ所沢店</a>
+                        </li>
+                        <li>
+                            <a href="http://www.yueqi1803h5.com/shops/ageo/">丸広上尾店</a>
+                        </li>
+                        <li>
+                            <a href="http://www.yueqi1803h5.com/shops/iruma/">丸広入間店</a>
+                        </li>
+                        <li>
+                            <a href="http://www.yueqi1803h5.com/shops/kawagoe/">丸広川越店</a>
+                        </li>
+                        <li>
+                            <a href="http://www.yueqi1803h5.com/shops/soundcrew-kashiwa/">ヤマノミュージックサロン柏</a>
+                        </li>
+                        <li>
+                            <a href="http://www.yueqi1803h5.com/shops/shinurayasu/">新浦安店</a>
+                        </li>
+                        <li>
+                            <a href="http://www.yueqi1803h5.com/shops/chiba/">そごう千葉店</a>
+                        </li>
+                        <li>
+                            <a href="http://www.yueqi1803h5.com/shops/tsurumiryokuchi/">イオンモール鶴見緑地店</a>
+                        </li>
+                        <li>
+                            <a href="http://www.yueqi1803h5.com/shops/yao/">八尾店</a>
+                        </li>
+                        <li>
+                            <a href="http://www.yueqi1803h5.com/shops/nishinomiya/">西宮ガーデンズ店</a>
+                        </li>
+                        <li>
+                            <a href="http://www.yueqi1803h5.com/shops/hiroshima/">そごう広島店</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部导航开始 -->
+    <div class="bottom">
+        <!--  <div class="bottom1">
+              <ul>
+                <li> -->
+        <a href="http://www.yueqi1803h5.com/company/law/">特定商取引法に基づく表記(楽器)</a>
+        <!-- </li>
+                <li> -->&nbsp;&nbsp;｜&nbsp;&nbsp;
+        <!-- </li>
+                <li> -->
+        <a href="http://www.yueqi1803h5.com/company/law/#anc_02">古物営業法に基づく表記</a>
+        <!-- </li>
+                <li> -->&nbsp;&nbsp;｜&nbsp;&nbsp;
+        <!-- </li> -->
+        <!-- <li class="li1"> -->
+        <a href="http://www.yueqi1803h5.com/company/privacy_policy/">個人情報について</a>
+        <!-- </li>
+              </ul> -->
+        <!--  </div> -->
+        <!--  <div class="bottom2"> -->
+        <!-- <p> -->
+        <br> 山野楽器オンラインショップに掲載されているすべてのコンテンツ（記事、画像データなど）は、（株）山野楽器の承諾なく無断で掲載および転載できません。
+        <!-- </p> -->
+        <!-- </div>
+            <div class="bottom3">
+              <p> -->
+        <br> copyright Yamano Music co. All rights reserved.
+        <!-- </p>
+            </div> -->
+        <!-- 底部导航结束 -->
+    </div>
+</div>
+</body>
+</html>
+<script src="./js/shouye.js"></script>
