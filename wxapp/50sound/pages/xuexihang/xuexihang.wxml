@@ -1,0 +1,13 @@
+<!--pages/xuexihang/xuexihang.wxml-->
+<!-- min-height:{{h}}; -->
+<view id="body" style='background-image: url("")'>
+<view id='div1-1'>
+<image id='img1' src='../../image/50sound/1.jpg' mode="aspectFit"></image>
+<view id='div1'><view id='div1-2'><view id='div1-3'><text id='t1'>0</text> / 105</view></view></view>
+<view id='div1-4'>已学习假名 <text id='t2'>0</text> 个 ></view>
+<image id='img1-1' src='../../image/50sound/001.png'></image>
+<view id='div2-1'>目前学习进度是 <text id='t3'>清音 - あ行</text> 快来继续学习吧！</view>
+<image id='img2' src='../../image/50sound/4.png' mode="widthFix"></image>
+<button bindtap="take_up">开始学习</button>
+</view>
+</view>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>四小组后台管理系统</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="assets/bootstrap/css/bootstrap-fileupload.css" rel="stylesheet" />
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style-responsive.css" rel="stylesheet" />
+    <link href="css/style-default.css" rel="stylesheet" id="style_color" />
+    <link href="assets/fancybox/source/jquery.fancybox.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/uniform/css/uniform.default.css" />
+</head>
+
+<body class="fixed-top">
+    <div id="header" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <div class="sidebar-toggle-box hidden-phone">
+                    <div class="icon-reorder tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+                </div>
+                <a class="brand" href="index.html">
+                    <img src="img/logo.png" alt="四小组" />
+                </a>
+                <a class="btn btn-navbar collapsed" id="main_menu_trigger" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="arrow"></span>
+                </a>
+                <div class="top-nav ">
+                    <ul class="nav pull-right top-menu">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="img/avatar1_small.jpg" alt="">
+                                <span class="username"><%=username%></span>
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu extended logout">
+                                <li id="icon-cog"><a href="#"><i class="icon-cog"></i> 修改密码</a></li>
+                                <li id="icon-key"><a href="login"><i class="icon-key"></i> 退出登录</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container" class="row-fluid">
+        <div class="sidebar-scroll">
+            <div id="sidebar" class="nav-collapse collapse">
+                <div class="navbar-inverse">
+                    <form class="navbar-search visible-phone">
+                        <input type="text" class="search-query" placeholder="Search" />
+                    </form>
+                </div>
+                <ul class="sidebar-menu">
+                    <%if(username=="管理员"){%>
+                        <li class="sub-menu active">
+                            <a href="javascript:;" class="">
+                                <i class="icon-tasks"></i>
+                                <span>人员权限管理</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub">
+                                <li><a class="" href="form_layout.html">新闻列表</a></li>
+                                <li><a class="" href="form_component.html">新闻添加</a></li>
+                            </ul>
+                        </li>
+                        <%}%>
+                            <li class="sub-menu active">
+                                <a href="javascript:;" class="">
+                                    <i class="icon-tasks"></i>
+                                    <span>音管理</span>
+                                    <span class="arrow"></span>
+                                </a>
+                                <ul class="sub">
+                                    <li><a class="" href="./catelist">50音列表</a></li>
+                                    <li><a class="" href="./addcate">50音添加</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="sub-menu active">
+                                <a href="javascript:;" class="">
+                                    <i class="icon-tasks"></i>
+                                    <span>新闻管理</span>
+                                    <span class="arrow"></span>
+                                </a>
+                                <ul class="sub">
+                                    <li><a class="" href="/admin/newslist">新闻列表</a></li>
+                                    <li><a class="" href="/admin/addnews">新闻添加</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-menu active">
+                                <a href="javascript:;" class="">
+                                    <i class="icon-tasks"></i>
+                                    <span>上传文件</span>
+                                    <span class="arrow"></span>
+                                </a>
+                                <ul class="sub">
+                                    <li><a class="" href="/admin/uploadht">上传文件</a></li>
+                                    <li><a class="" href="/admin/addnews">新闻添加</a></li>
+                                </ul>
+                            </li>
+
+                </ul>
+            </div>
+        </div>

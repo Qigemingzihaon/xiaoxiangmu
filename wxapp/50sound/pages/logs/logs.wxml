@@ -1,0 +1,27 @@
+<view id="body" style='height:{{h}};background-image: url("http: //192.168.2.102:8080/olimage/img/20180608225308_967404.jpg")'>
+
+<image class='img1-1' src='../../image/50sound/01-3.png'></image>
+
+<view id='div2'>
+
+<view class='div1'><navigator><view class='div1-1'><image class='imgd' src='../../image/50sound/4-1.jpg'></image></view><view class='t1'>刹那·Ｆ·清栄</view></navigator></view>
+
+<navigator><view class='div2-1' style='background-image: url("{{url[2].url}}")'>
+<image class='img2-1' src='../../image/50sound/5-1.png'></image><view class='t1-1'>我的课程</view>
+</view></navigator>
+
+<navigator><view class='div2-1' style='background-image: url("{{url[2].url}}")'>
+<image class='img2-1' src='../../image/50sound/5-6.png'></image><view class='t1-1'>我的钱包</view>
+</view></navigator>
+<navigator><view class='div2-1' style='background-image: url("{{url[2].url}}")'>
+<image class='img2-1' src='../../image/50sound/5-2.png'></image><view class='t1-1'>更新题库</view>
+</view></navigator>
+<navigator><view class='div2-1' style='background-image: url("{{url[2].url}}")'>
+<image class='img2-1' src='../../image/50sound/5-3.png'></image><view class='t1-1'>学习提醒</view>
+</view></navigator>
+<navigator><view class='div2-1' style='background-image: url("{{url[2].url}}")'>
+<image class='img2-1' src='../../image/50sound/5-4.png'></image><view class='t1-1'>分享App给好友</view>
+</view></navigator>
+
+</view>
+</view>

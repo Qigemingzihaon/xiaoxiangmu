@@ -1,0 +1,140 @@
+/* pages/ytjm/ytjm.wxss */
+
+/* page{
+    padding: 0;
+    background-image: url(http://192.168.2.102:8080/olimage/imgbj/20180609141126_443314.jpg)  
+} */
+#body{
+  width:750rpx;
+  height:100%;
+  position: relative;
+}
+#audiohide{
+ display: none;
+}
+.img1{
+  /* margin-top: 50rpx; */
+  width: 100%;
+}
+
+.div1{
+position: relative;
+}
+
+.div1-1{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  top: 20rpx;
+  left: 10rpx;
+} 
+
+.div1-2{
+  position: absolute;
+  top: 20rpx;
+  left: 170rpx;
+}
+
+.div1-3{
+  position: absolute;
+  top: 20rpx;
+  left: 335rpx;
+}
+
+.div1-4{
+  position: absolute;
+  top: 20rpx;
+  left: 487rpx;
+}
+
+.div1-5{
+  position: absolute;
+  top: 20rpx;
+  left: 650rpx;
+}
+
+.img1-1{
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.img3-1{
+  width: 500rpx;
+  height: 500rpx;
+}
+
+.div3{
+  width: 500rpx;
+  height: 500rpx;
+  position: absolute;
+  top: 350rpx;
+  left: 120rpx;
+}
+
+.div4{
+ /* position: relative; */
+ position: absolute;
+ bottom: 40px;
+}
+
+button{
+  width: 200rpx;
+  height: 110rpx;
+  border-radius:60rpx;
+  line-height: 110rpx;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.b1{
+  position: absolute;
+  bottom: 1rpx;
+  left: 40rpx;
+  z-index: 20;
+  opacity:0.2;
+}
+
+.b2{
+  position: absolute;
+  bottom: -51rpx;
+  left: 275rpx;
+  background-color: #DEB887;
+}
+
+.b3{
+  position: absolute;
+  bottom: 1rpx;
+  left: 510rpx;
+  z-index: 20;
+  opacity:0.2;
+}
+
+.div4-1{
+
+  position: relative;
+}
+
+.img4-1{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  top: -104rpx;
+  left: 90rpx;
+  
+}
+
+.img4-2{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  top: -104rpx;
+  left: 563rpx;
+}
+
+.img4-3{
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  top: -82rpx;
+  left: 340rpx;
+}

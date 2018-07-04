@@ -1,0 +1,14 @@
+/**app.wxss**/
+page{
+   background-image: url("http://192.168.2.102:8080/olimage/imgbj/20180609141126_443314.jpg") 
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 

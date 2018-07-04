@@ -1,0 +1,31 @@
+<!--pages/ytjm/ytjm.wxml-->
+<view id="body" style='height:{{h}};'>
+<image class='img1' src='../../image/50sound/1-6.png' mode="widthFix"></image>
+<view class='div1'>
+  <view wx:for="{{url}}" wx:for-index="idx" wx:for-item="itemName" wx:key="{{itemName.sounid}}" class='div1-{{itemName.sounid}}' bindtap="take_sounid" data-sounid="{{itemName.sounid}}" >
+     <image class='img1-1' src='{{httpym}}{{itemName.url}}'>></image> 
+  </view>
+</view>
+
+<view class='div3'>
+   <swiper indicator-dots="{{indicatorDots}}" current='{{current}}'
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"  class='img3-1'>
+    <block wx:for="{{imgUrls}}" wx:key="{{indx}}">
+      <swiper-item>
+        <image src="{{httpym}}{{item.url}}" class="slide-image img3-1"/>
+      </swiper-item>
+    </block>
+  </swiper> 
+</view>
+  <audio id='audiohide' poster="{{poster}}" src="{{httpym}}{{url[bofangurl].urly}}" controls></audio>  
+<view class='div4'><button class='b2' bindtap="take_pp">"{{buttonhtml}}"</button> 
+<view class='div4-1'>
+<button class='b1' bindtap="take_bf"></button><image class='img4-1' src='../../image/50sound/01-1.png'></image>
+</view>
+<view class='div4-2'>
+<button class='b3' bindtap="take_x"></button><image class='img4-2' src='../../image/50sound/01-2.png'></image>
+</view>
+<image class='img4-3' src='../../image/50sound/01-4.png'></image>
+</view>
+
+</view>

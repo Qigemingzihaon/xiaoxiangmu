@@ -1,0 +1,49 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+
+    "pages/gg/gg",
+    "pages/ytjm/ytjm",
+    
+    "pages/logs/logs",
+    
+    "pages/xuexihang/xuexihang",
+    
+    "pages/kaishixuexi/kaishixuexi",
+    "pages/jiemian/jiemian",
+    "pages/accredit/accredit"
+  ],
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#1E90FF",
+    "borderStyle": "black",
+    "backgroundColor": "#F5DEB3",
+    "list": [
+      {
+        "pagePath": "pages/xuexihang/xuexihang",
+        "iconPath": "image/PNG Files - Black/6-01.png",
+        "selectedIconPath": "image/PNG Files - Blue/6-01.png",
+        "text": "五十音"
+      },
+      {
+        "pagePath": "pages/gg/gg",
+        "iconPath": "image/PNG Files - Black/11-01.png",
+        "selectedIconPath": "image/PNG Files - Blue/11-01.png",
+        "text": "跟老师学"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "iconPath": "image/PNG Files - Black/3-01.png",
+        "selectedIconPath": "image/PNG Files - Blue/3-01.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#444",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "#fff"
+  }
+}

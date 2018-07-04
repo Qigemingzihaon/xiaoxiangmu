@@ -1,0 +1,185 @@
+*{
+	margin:0;
+	padding: 0;
+}
+li{
+	list-style-type: none;
+
+}
+/*top   */
+	.tb{
+	position: relative;
+	width: 1210px;
+	height: 80px;
+	/*border: 1px solid #ff0;*/
+	margin: 0 auto;
+	}
+	.tb .logo,.tb .hy,.tb .yy{
+	width: 150px;
+	height: 50px;
+	/*border: 1px solid #000;*/
+	position: absolute;
+	top: 15px;
+	}
+	.tb .logo{
+	left: 0px;
+	background-image: url(../img/icon.png);
+	background-position: 0px 2px;
+	}
+	.tb .hy{
+	left: 150px;
+	text-align: center;
+	line-height: 59px;
+	font-size:27px ;
+	}
+	.tb .yy{
+	right:0px;
+	text-align: center;
+	line-height: 80px;
+	font-family: "Microsoft YaHei","Hiragino Sans GB";
+	}
+	.tb .logo,.tb .yy a{
+	cursor: pointer;
+	text-decoration: none;
+	}
+	.tb .yy a:hover{
+	text-decoration: underline;
+	}
+	.tb .yy span{
+	color: #999;
+	}
+/*top*/
+/*中部*/
+	.login{
+		width: 1210px;
+		height: 600px;
+		/*border:1px solid #555;*/
+		margin: 0 auto;
+		position: relative;
+	}
+	.login .shuru{
+		position: absolute;
+		top: 50px;
+		left: 180px;
+		width: 400px;
+	}
+	.login .shuru .shuruword{
+		text-align: center;
+		text-align-last: justify;
+		font-size: 20px;
+		line-height: 50px;
+		color: #666;
+	}
+	.login .shuru .shuruword,.login .shuru .a1{
+		height: 50px;
+	}
+	.login .shuru .tisshi{
+		height: 50px;
+	}
+	.login .shuru .a1{
+	}
+	.login .shuru .register{
+		width: 400px;
+		height: 50px;
+		font-size: 30px;
+		color:#fff;
+		margin: 0 auto;
+		background: red;
+		/*border: 1px solid #000;*/
+	}
+	/*边部logo*/
+	.login .zcqh{
+		width: 200px;
+		height: 200px;
+		/*border: 1px solid #000;*/
+		position: absolute;
+		top: 50px;
+		right: 200px;
+	}
+	.login .zcqh .zcqh1,.login .zcqh .zcqh2{
+		width: 200px;
+		height: 100px;
+		/*border: 1px solid #000;*/
+		position: relative;
+	}
+	.login .zcqh .zcqh1 .tiaozhuan,.login .zcqh .zcqh2 .tiaozhuan{
+		width: 200px;
+		height: 40px;
+	}
+	.login .zcqh .zcqh2{
+		border-top: 1px solid #ddd;
+	}
+	.login .zcqh li .tiaozhuan .xlogo1,.login .zcqh li .tiaozhuan .xlogo2{
+		width: 45px;
+		height: 40px;
+		/*border: 1px solid #000;*/
+		position: absolute;
+		top: 30px;
+		left: 0px;
+		background-image: url(../img/icon.png); 
+	}
+	.login .zcqh li .tiaozhuan .xlogo1{
+		background-position: 0px -44px;
+	}
+	.login .zcqh li .tiaozhuan .xlogo2{
+		background-position: -49px -44px;
+	}
+	.login .zcqh li .tiaozhuan span{
+		width: 150px;
+		height: 40px;
+		/*border: 1px solid #000;*/
+		position: absolute;
+		top: 30px;
+		left: 47px;
+	}
+	.login .zcqh li .tiaozhuan span.wrod1{
+		line-height: 40px;
+	}
+	.login .zcqh li .tiaozhuan .wrod2{
+		line-height: 20px;
+	}
+	.login .zcqh li .tiaozhuan{
+		color:#666;
+	}
+	.login .zcqh li .tiaozhuan:hover{
+		color:#000;
+	}
+/*底部*/
+.db{
+	position: relative;
+	width: 1210px;
+	height: 84px;
+	/*border: 1px solid #000;*/
+	font-size: 12px;
+	color:#999;
+	margin: 0 auto;
+}
+.db .dbdh,.db .dbsm{
+	width: 800px;
+	height: 40px;
+	/*border: 1px solid #000;*/
+	margin: 0 auto;
+
+}
+.db .dbdh .wnb,.db .dbdh .gd{
+	float: left;
+	line-height: 40px;
+	text-align: center;
+}
+.db .dbdh .wnb a:link,.db .dbdh .wnb a:active,.db .dbdh .wnb a:visited{
+	color:#999;
+	text-decoration: none;
+}
+.db .dbdh .wnb a:hover{
+	text-decoration: underline;
+}
+.db .dbdh .gd{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.db .dbsm{
+	line-height: 40px;
+	text-align: center;
+}
+}
+

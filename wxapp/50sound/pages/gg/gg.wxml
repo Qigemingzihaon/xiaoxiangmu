@@ -1,0 +1,13 @@
+<!--pages/gg/gg.wxml-->
+<view id="body" style='height:{{h}};background-image: url("{{url[1].url}}")'>
+
+<!-- <view class='div2'> <video class='img1' src="../../image/50sound/4B200150EC7F832A041667F134E13C05.mp4" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video></view> -->
+
+<navigator><view class='div2'><image class='img1' src='../../image/50sound/6-1.png'></image></view></navigator>
+
+<navigator><view class='div2'><image class='img1' src='../../image/50sound/6-2.png'></image></view></navigator>
+
+
+
+
+</view>

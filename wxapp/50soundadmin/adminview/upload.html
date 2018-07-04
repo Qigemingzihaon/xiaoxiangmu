@@ -1,0 +1,63 @@
+<% include head.html %>
+    <div id="main-content">
+    	<div id="uploadk">
+            <ul>
+                <li class="ad">
+                    <input type="file">
+                    <button class="submit-button" type="button">开始上传音频</button>
+                    <input type="text" name="pm3path">
+                </li>
+                <li class="ad">
+                    <input type="file">
+                    <button class="submit-button" type="button">开始上传歌词</button>
+                    <input type="text" name="rlcpath">
+                </li>
+                <li class="ad">
+                    <input type="file" multiple="multiple">
+                    <button class="submit-button" type="button">开始上传文件</button>
+                    <input type="text" name="picpath">
+                </li>
+                <li class="ad">
+
+                </li>
+                <li class="ad">
+
+                </li>
+            </ul>
+        </div>
+    	<div class="jianlilujing">
+    		<div id="">
+    			指定或创建olmage下一级文件保存路径：
+    		</div>
+    		<input type="text" name="dirname" id="dirname" value="" />
+    		<button id="chuangjian">提交</button>
+    		显示指定路径
+    		<input type="text" name="dirnamex" id="dirnamex" value="" />
+    	</div>
+    	
+    	
+    	<form id="xingxi">
+    		<ul>
+    			<li>
+    				<div id="">50音id</div>
+    				<input type="txet" name="sounid" id="sounid" value="" /></li>
+    			<li><div id="">1平假名或2片假名</div><input type="txet" name="pjaorpja" id="pjaorpja" value="" /></li>
+    			<li><div id="">音频id</div><input type="txet" name="ypid" id="ypid" value="" /></li>
+    			<li><div id="">背景图片用途1表示背景图片2表示背景图标</div><input type="txet" name="bgc" id="sounid" value="" /></li>
+    			<li><div id="">其他类</div><input type="txet" name="yuming" id="yuming" value="" /></li>
+    			<li>
+    				<div id="">文件类型</div>
+    				图片：<input type="radio" name="Rad" value="1" >
+					音频：<input type="radio" name="Rad" value="2" >
+    			</li>
+    		</ul>
+    		<button id="shangchuanmysql" type="button">保存到数据库</button>
+    		
+    	</form>
+    	  
+    	
+        
+        <script src="./js/jquery-1.8.3.min.js"></script>
+        <script src="./js/uploadk.js"></script>
+    </div>
+<% include foot.html %>
