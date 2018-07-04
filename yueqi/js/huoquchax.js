@@ -38,7 +38,7 @@ module.exports = function (db, shousuoci, fengye, res) {
             for (let i = 0; i < result.length; i++) {
               coll.push(i);
             }
-            console.log(coll);
+            console.log(coll,111);
             callback(null, coll, result);
 
           }
