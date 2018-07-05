@@ -457,25 +457,25 @@
 
             <div class="zh4">
 
-                <div class="right6">
-                    <a href="http://www.yueqi.com/hard/userProdDetail.do?goodsCode=G000114316">
-                        <div>
-                            <img src="./img/19.jpg" alt="">
-                            <div class="right6-1">
-                                <p>新品</p>
+                <%for(var i=0;i<shouye.length;i++){ var n=4+i;%>
+          
+                    <div class="right">
+                        <a href="<%='./zssp?pdpctid='+shouye[i].pdpctid%>">
+                            <div>
+                                <img src="<%=shouye[i].imgurl[0]%>" alt="">
+                                <div class="right4">
+                                    <p>新品</p>
+                                </div>
+                                <h6 class="right4-2"><%=shouye[i].product_pname%></h6>
+                                <p class="right4-3"><%=shouye[i].shopid%>
+                                </p>
+                                <p class="right4-4">販売価格 :
+                                    <em><%=shouye[i].money%></em>
+                                </p>
                             </div>
-                            <h6 class="right6-2">G & L</h6>
-                            <p class="right6-3">ASAT Classic
-                                <br>Maple Fingerboard
-                                <br>Butterscotch Blonde
-                                <br>（ギタースポット）
-                            </p>
-                            <p class="right6-4">販売価格 :
-                                <em>￥219,456</em>
-                            </p>
-                        </div>
-                    </a>
-                </div>
+                        </a>
+                    </div>
+                  <%}%>
 
 
                 <button>

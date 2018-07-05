@@ -822,19 +822,19 @@ body{
 .zh4{
 	position: relative;
 	width: 754px;
-	height: 2229px;
 	position: absolute;
 	top: 585px;
 	right:0;
 	left: 245px;
 }
 
+
 .zh4-1{
 	position: relative;
 	width: 754px;
 	height: 147px;
 	position: absolute;
-	bottom: 0px;
+	bottom: -190px;
 	border-top: 1px solid #dfdfdf;
 	border-bottom: 2px solid #1d1f86;
 }
@@ -851,7 +851,7 @@ body{
 	width: 388px;
 	height: 50px;
 	position: absolute;
-	bottom: 190px;
+	bottom: -100px;
 	left: 183px;
 }
 
@@ -881,9 +881,8 @@ body{
 	width: 166px;
 	height: 401px;
 	/*border: 1px solid #F2D;*/
-	position: absolute;
-    top: 1725px;
-    left:245px;
+	position: relative;
+   
 }
 
 .big-menu .right4 a:hover,  .right4 a:active{
@@ -923,14 +922,14 @@ body{
 	height: 249.14px;
 }
 
-.big-menu .right4 .right4-1{
+.big-menu .right .right4{
 	width: 38px;
 	height: 19px;
 	background-color: #1d1f85;
 	margin-top: 22px;
 }
 
-.big-menu .right4 .right4-1 p{
+.big-menu .right .right4 p{
 	color: #fff;
 	font-size: 12px;
 	text-align: center;
@@ -1714,7 +1713,17 @@ body{
 	color: #c5c6e0;
     font-size: 11px;
 }
-
+.zh4 .right{
+	width: 166px;
+	height: 401px;
+	float: left;
+	position: relative;
+	margin-right: 10px;
+} 
+.zh4 .right img{
+	width: 166px;
+	height: 249.14px;
+}
 /*.bottom .bottom1{
 	height: 13px;
 	width: 480px;
@@ -1761,4 +1770,5 @@ body{
 	color: #c5c6e0;
     font-size: 11px;
 }
+
 /*底部导航结束*/

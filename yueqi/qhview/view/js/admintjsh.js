@@ -155,7 +155,7 @@ window.onload = function () {
             if (response.data.r == 'ok') {
               console.log(66)
               if (response.data.r1.length) {
-                alert("response.data.r1")
+                alert(response.data.r1)
               }
               window.location.href = '/admin/adminshangp'
             } else {
