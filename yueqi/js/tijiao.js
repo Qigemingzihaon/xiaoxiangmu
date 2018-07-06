@@ -340,8 +340,6 @@ module.exports = function () {
       }
     });
   });
-
-
   // route.use(express.static('qhview/view'));
   //登录 保存用户信息到session
   route.post('/dl', function (req, res) {
@@ -438,7 +436,6 @@ module.exports = function () {
       }
     });
   });
-
   //获取用户名信息
   route.post('/huoquname', function (req, res) {
     // console.log(req.body)

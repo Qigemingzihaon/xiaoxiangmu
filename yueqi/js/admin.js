@@ -115,14 +115,6 @@ module.exports = function () {
       yhdl: req.session.adname
     });
   });
-  
-
-
-
-
-
-  
-  
   route.use(express.static('qhview/view'));
   return route;
 }

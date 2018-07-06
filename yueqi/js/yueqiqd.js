@@ -88,7 +88,6 @@ module.exports = function () {
     require('../js/huoqust.js')(dengl,res)
     
   });
-
   // 判断是否登录
   route.use(function (req, res, next) {
     if (!req.session.graid &&
@@ -99,19 +98,11 @@ module.exports = function () {
       next();
     }
   });
-
-
-
   route.get('/zcwc', function (req, res) {
     res.render('view/zcwc', {
       zczhanid: req.session.zczhanid
     });
   });
-
-
-
-
-
   route.get('/dlwl', function (req, res) {
     //发送个人信息到页面
     dengl='ok';
@@ -187,16 +178,13 @@ module.exports = function () {
   route.get('/tjsh1', function (req, res) {
     res.render('view/tjsh1');
   });
-
   route.get('/xgwc', function (req, res) {
     res.render('view/xgwc');
   });
-
   route.get('/YAMANOMUSICOnline', function (req, res) {
     var dengl='ok';
     require('../js/huoqust.js')(dengl,res)
   });
-
   route.use(express.static('qhview/view'));
   return route;
 }
